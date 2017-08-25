@@ -8,14 +8,14 @@ import Homeservice from '../services/homeService.js'
 export default class City extends Component{
 	constructor({history}){
 		super();
-//		console.log(store.getState())
 		this.state = {
 			smadata:[],
 			bigdata:{},
 			history,
-			addr:store.getState().addr,
+			addr:store.getState().addr
 			
 		}
+	
 	}
 	
 	render(){
@@ -76,8 +76,11 @@ export default class City extends Component{
 			type: 'changeaddr',
 			val: sitem.name
 		})
-		
-	//	console.log(store.getState())
+		// this.state.history.push({
+		// 	pathname:'/'
+		// })
+
+		//console.log(store.getState())
 	}
 	componentWillMount(){
 		Homeservice.getcityDate()
@@ -89,6 +92,7 @@ export default class City extends Component{
 		})
 
 		unsubscribe = store.subscribe(()=>{
+	
 			this.setState({addr: store.getState().addr});
 		});
 

@@ -5,22 +5,22 @@ import {Link} from 'react-router-dom'
 import store from '../../src/store'
 
 let unsubscribe;
-
+console.log(store)
 export default class AppHeader extends Component{
 	constructor(){
 		super();
-		//console.log(store.getState())
-		this.state={
-			addr:store.getState()
-		}
 		
+		this.state={
+			addr:store.getState().addr
+		}
+		console.log(store.getState())
 	}
 	render(){
 		return (
 			<div class="Appheader">
 				<span class='iconfont icon-menu' onClick={this.menuShow.bind(this)}></span>
 				<h1 class='title'>{this.props.title}</h1>
-				<Link to="/city" class='city'>深圳<i class='iconfont icon-arrow-down'></i></Link>
+				<Link to="/city" class='city'>{this.state.addr}<i class='iconfont icon-arrow-down'></i></Link>
 
 				<Link to="/me" class="iconfont icon-person"></Link>
 			</div>
@@ -28,12 +28,13 @@ export default class AppHeader extends Component{
 	}
 	menuShow(){
 		this.props.menuHandle();
-//		console.log('dinaji')
 	}
 	componentWillMount(){
 		unsubscribe = store.subscribe(()=>{
-			this.setState({addr: store.getState().addr});
+			console.log('Header监听触发了');
+			this.setState({addr:store.getState().addr});
 		});
+	
 	}
 	componentDidMount(){
 	unsubscribe();

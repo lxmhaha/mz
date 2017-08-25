@@ -15,3 +15,87 @@ background: #fff;
 .goodsPage .goodsbanner .swiper-wrapper .swiper-slide img{
     width: 100%;
 }
+.goodsPage .goodsinfo{
+    background: #fff;
+    padding: 10px 10px;
+}
+.goodsPage .goodsinfo h2{
+font-size: 16px;
+font-weight: normal;
+height: 20px;
+line-height: 20px;
+}
+.goodsPage .goodsinfo span{
+    display: block;
+    font-size: 12px;
+    color: #757575;
+    margin-top: 4px;
+}
+.goodsPage .goodsinfo .price{
+    margin-top: 4px;
+    color: #ff5000;
+    font-size: 21px;
+    font-weight: 700;
+}
+.goodsPage-wrap{
+    position: absolute;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom: 0;
+}
+.goodsPage-wrap .goodsbuy{
+    position: absolute;
+    left: 0;
+    height: 50PX;
+    bottom: 0px;
+    right: 0px;
+    background: pink;
+    display: flex;
+    justify-content: space-between;
+}
+.goodsPage-wrap .goodsbuy .goodsbuy-left{
+    height: 100%;
+    font-size: 12px;
+    line-height: 50px;
+    padding-left: 20px;
+    
+}
+.goodsPage-wrap .goodsbuy .buybtn{
+    color: #fff;
+    font-size: 16px;
+    float: right;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    line-height: 48px;
+    background-color: #ff5000;
+}
+
+.goodsPage .selectbox{
+    height: 30px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.goodsPage .selectbox .chooseAction{
+    height: 100%;
+    width: 100%;
+}
+.goodsPage  .goodcover{
+position: absolute;
+top:0px;
+left: 0px;
+right: 0px;
+bottom:50px;
+background-color: rgba(0,0,0,.3);
+z-index: 100;
+}
+.goodsPage  .goodtype{
+    position: absolute;
+    background: pink;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+}

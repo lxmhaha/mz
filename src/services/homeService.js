@@ -67,14 +67,14 @@ function getwillcomelistDate(){
 
 //电影详情列表页面
 
-function getfilmdetailDate(id){
+function getfilmdetailDate(cid){
   return new Promise((resolve,reject)=>{
 
-      axios.get(API.filmdetailsApi+id)
+      axios.get(API.filmdetailsApi+cid)
     .then((res)=>{
         //console.log(res)
 var filmobj=res.data.data.film
-var obj={}
+let obj={}
 obj.id=filmobj.id
 obj.imgurl=filmobj.cover.origin
 obj.director=filmobj.director
@@ -102,13 +102,13 @@ obj.time=`${m}月${d}日上映`
 
 
 //影片页面正在热映
-function getfilmplayDate(){
+function getfilmplayDate(num){
   return new Promise((resolve,reject)=>{
-
-      axios.get(API.flimplayListApi)
+      axios.get(API.flimplayListApi+num)
     .then((res)=>{
+
     //    console.log(res)
-        resolve(res.data.data.films)   
+    resolve(res.data.data.films)   
       //console.log((res.data.data.films) )
     })
     .catch((err)=>{
@@ -117,11 +117,13 @@ function getfilmplayDate(){
   })
   
 }
+
+
 //影片页面即将上映
-function getfilmwillcomeDate(){
+function getfilmwillcomeDate(num){
   return new Promise((resolve,reject)=>{
 
-      axios.get(API.flimwillcomeApi)
+      axios.get(API.flimwillcomeApi+num)
     .then((res)=>{
        // console.log(res)
         let arr=res.data.data.films
@@ -140,15 +142,18 @@ function getfilmwillcomeDate(){
     })
   })  
 }
+
 //s商城页面，是一个比较多的各种数据
 function getshopDate(){
   return new Promise((resolve,reject)=>{
 
       axios.get(API.shopIconApi)
     .then((res)=>{
-        //console.log(res)
-       
+   //     console.log(res)
+     res.data.data.splice(12,3) 
+
     let arriconlist=(res.data.data.slice(0,8)) 
+
 
      var newArriconlist=arriconlist.map((item)=>{
       let obj={}
@@ -208,10 +213,10 @@ bigobj.srcpiclist=newsrcpiclist
     })
   }) 
 }
-function gethandpickDate(){
+function gethandpickDate(num){
   return new Promise((resolve,reject)=>{
 
-      axios.get(API.handpickApi)
+      axios.get(API.handpickApi+num)
     .then((res)=>{
 //console.log((res.data.data.list) )
  let handarr=res.data.data.list

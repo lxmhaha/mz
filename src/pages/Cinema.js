@@ -46,7 +46,7 @@ export default class Cinema extends Component{
 	}
 	
 	listShow(index){
-		console.log(index)
+		//console.log(index)
 		
 	var ocinemalist=document.querySelectorAll('.itembox')	
 
@@ -70,12 +70,12 @@ export default class Cinema extends Component{
 
 		Homeservice.getcinemalistDate()
 		.then((res)=>{
-			console.log(res)
+		//	console.log(res)
 
 			this.setState({areaData:res.smadata})
 			this.setState({arealist:res.bigdata})
-			console.log(this.state.areaData)
-			console.log(this.state.arealist)
+	//		console.log(this.state.areaData)
+	//		console.log(this.state.arealist)
 		})
 
 	

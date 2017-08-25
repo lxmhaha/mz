@@ -6,13 +6,15 @@ export default class Homelist extends Component{
 	constructor(){
 		super();
 		this.state={
-				fwillcomeDate:[]
+				fwillcomeDate:[],
+				page:1,
+				flag:false
 		}
 		
 	}
 	render(){
 		return (
-			<div class="filmlist willcomePage">
+			<div class="filmlist willcomePage" onScroll={this.handleScroll.bind(this)}  ref="bodyBox">
                <ul>
                     {this.state.fwillcomeDate.map((item,index)=>{
                         return(
@@ -38,6 +40,31 @@ export default class Homelist extends Component{
                 </ul>
 			</div>
 		)
+	}
+	handleScroll(e){
+		let clientHeight = this.refs.bodyBox.clientHeight; //可视区域高度
+		let scrollTop  = this.refs.bodyBox.scrollTop;  //滚动条滚动高度
+		let scrollHeight = this.refs.bodyBox.scrollHeight; //滚动内容高度
+		console.log(clientHeight,scrollTop,scrollHeight)
+		if((clientHeight+scrollTop)>scrollHeight-30 && this.state.flag==false){
+			this.state.page++
+			this.setState({page:this.state.page})
+			this.setState({flag:true})
+
+			Homeservice.getfilmwillcomeDate(this.state.page)
+			.then((res)=>{
+				console.log(res)
+				res.map((item)=>{
+					this.state.fwillcomeDate.push(item)
+					this.setState({fwillcomeDate:this.state.fwillcomeDate})
+				})
+				this.setState({fwillcomeDate:this.state.fwillcomeDate})
+				this.setState({flag:false})
+			})
+
+		}
+	
+		
 	}
 	componentWillMount(){
 		Homeservice.getfilmwillcomeDate()

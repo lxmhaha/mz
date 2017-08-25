@@ -6,6 +6,9 @@ import FilePlaying from "./FilePlaying.js"
 import Filewillcome from "./Filewillcome.js"
 
 
+
+
+
 export default class Movies extends Component{
 	constructor(){
 		super();
@@ -19,7 +22,7 @@ export default class Movies extends Component{
 	render(){
 
 		return (
-			<div class="page filmpage">
+			<div class="page filmpage"  >
 				
 				<div class='filmtype'>
 					<NavLink  exact  to='/movies/'>正在热映</NavLink>
@@ -34,4 +37,12 @@ export default class Movies extends Component{
 			</div>
 		)
 	}
+
+
+
+	componentDidMount(){
+	
+		
+	}
+	
 }	

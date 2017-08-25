@@ -16,12 +16,14 @@ import Goodsdetail from "./pages/Goodsdetail.js"
 
 import Filmdetail  from '../views/common/filmdetail.js'
 
-
+// import store from './store'
+// let unsubscribe;
 import './css/app.css'
 export default class App extends Component{
 	constructor(){
 		super();
 		//console.log(history)
+	//	console.log(store.getState())
 		this.state={
 			slideShow:false,
 			headerTitle: '卖座电影'

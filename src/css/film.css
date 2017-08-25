@@ -1,6 +1,7 @@
 .page.filmpage{
     padding: 0px 15px;
-    background: #f9f9f9
+    background: #f9f9f9;
+    overflow: hidden;
 }
 
 .filmpage .filmtype{
@@ -34,6 +35,7 @@ border-bottom:1px solid #fe6e00 ;
     box-sizing: border-box;
     color: #8e8e8e;
     font-size: 12px;
+    overflow: auto;
 }
  .filmlist ul{
     width: 100%;

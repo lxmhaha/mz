@@ -21,8 +21,8 @@ const  filmdetailsApi='/v4/api/film/'
 
 
 // 电影页面API
-const flimplayListApi='/v4/api/film/now-playing?page=1&count=7'
-const flimwillcomeApi='/v4/api/film/coming-soon?page=1&count=7'
+const flimplayListApi='/v4/api/film/now-playing?count=7&page='
+const flimwillcomeApi='/v4/api/film/coming-soon?count=7&page='
 
 // 卖座商
 // ico
@@ -30,7 +30,9 @@ const flimwillcomeApi='/v4/api/film/coming-soon?page=1&count=7'
  const shopIconApi='/api/ad/list'
 
 // 精选列表
-  const  handpickApi='api/recommend/home?page=1&num=20'
+  const  handpickApi='api/recommend/home?num=20&page='
+
+
 
 // 影院
 //http://m.maizuo.com/v4/api/cinema?__t=1503317067960

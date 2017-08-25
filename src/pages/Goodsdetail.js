@@ -11,15 +11,17 @@ export default class Goodsdetail extends Component{
             gid:history.location.state.gid,
             history,
             goodsdata:{},
-            goodsbanner:[]
+            goodsbanner:[],
+            skuListData:{}
           
 		}
         
-     console.log(this.state.history.location.state.gid)  
+//     console.log(this.state.history.location.state.gid)  
     }
     render(){
         return(
-            <div class="page goodsPage">
+            <div class="goodsPage-wrap">
+            <div class="goodsPage">
                 <div ref='goodsbanner' class='shopbanner swiper-container'>
                     <div class="swiper-wrapper">
                     
@@ -37,8 +39,26 @@ export default class Goodsdetail extends Component{
                 </div>
                 <div class='goodsinfo'>
                         <h2> {this.state.goodsdata.masterName}</h2>
+                        <span>{this.state.goodsdata.slaveName}</span>
+                       <div class="price">￥{this.state.skuListData.price/100}</div>
+                        <div>
+
+                        </div>
                 </div>
-               
+               <div class="selectbox">
+                    <div class="chooseAction">选择　规格　数量</div>
+                   
+               </div>
+               <div class="goodcover">
+                        <div class="goodtype">
+                            款式
+                        </div>
+                </div>
+            </div>
+            <div class="goodsbuy">
+                <div class='goodsbuy-left'>首页</div>
+                <div class="buybtn">立即购买</div>
+            </div>
             </div>
         )
     }
@@ -48,7 +68,8 @@ export default class Goodsdetail extends Component{
         .then((res)=>{
         console.log(res)
         this.setState({goodsdata:res})   
-            this.setState({goodsbanner:res.skuList[0].images})   
+        this.setState({goodsbanner:res.skuList[0].images})  
+        this.setState({skuListData:res.skuList[0]}) 
             	mySwiper.update();
     })
 

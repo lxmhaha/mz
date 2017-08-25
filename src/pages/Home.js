@@ -6,21 +6,24 @@ import Homelist from '../../views/common/Homelist.js'
 import WillcomeList from '../../views/common/WillcomeList.js'
 
 import  Filmdetail from '../../views/common/filmdetail.js'
-
+import store from '../store'
 import '../css/home.css'
 var mySwiper=null;
+let unsubscribe;
 export default class Home extends Component{
 	constructor({history}){
 		super();
+
 	//	console.log(history)
+console.log(store.getState())
 		this.state={
 			isshow:false,
 			bannerData:[],
 			nowlistDate:[],
 			willcomelist:[],
-			
 			history,
-			id:''
+			id:'',
+		//	addr:store.getState().addr
 
 		}
 	}
@@ -105,7 +108,9 @@ detailAction(item){
 			autoplay : 1000,
 			speed:300
 		})
-		
+	
 	}
+	
 
+	
 }
