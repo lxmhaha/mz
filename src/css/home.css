@@ -1,0 +1,186 @@
+#app .page.homepage{
+	position: absolute;
+	top:50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	color: red;
+    overflow: auto;
+    background: #e1e1e1;
+	
+}
+.homelist{
+    width: 100%;
+    padding-top: 17px;
+   
+
+}
+.homelist .listbox{
+    width: 100%;
+    width: 100%;
+}
+
+.homelist .listbox .playingmore{
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    text-align: center;
+
+}
+.homelist .listbox .playingmore a{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 28px;
+    width: 158px;
+    border: 1px solid  #aaa;
+    font-size: 12px;
+    color: #616161;
+    cursor: pointer; 
+    border-radius: 15px;
+    line-height: 30px;
+}
+.homelist .listbox li{
+    width: 286px;
+    /* height: 211px; */
+    background: #fff;
+    margin: 0 17px 17px 17px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.5px 0.5px 1px #a8a8a8;
+}
+.homelist .listbox li  span.listimg{
+    display: block;
+    width: 100%;
+   
+}
+.homelist .listbox li span img{
+    width: 100%;
+
+}
+ .homelist .listbox li .listifo{
+     display: block;
+    /* height: 50px; */
+    width: 100%;
+     display: flex;
+     justify-content: space-between;
+     box-sizing: border-box;
+     padding-right: 13px
+    
+} 
+ .homelist .listbox li .listifo span{
+    display: block;
+    flex: 1;
+
+ }
+.homelist .listbox li .listifo  i{
+    display: block;
+    font-style: normal;
+    font-size: 8px;
+    color: #9a9a9a;
+    line-height: 15px;
+}
+.homelist .listbox li .listifo em{
+    display: block;
+    /* width: 40px; */
+    /* height: 50px; */
+    color: #f78360;
+    font-size: 18px;
+    font-style: normal;
+    /* line-height: 50px; */
+    margin: auto 0;
+}
+.homelist .listbox li .listifo .texttitle{
+    font-size: 12px;
+    line-height: 15px;
+    color: #333;
+}
+.homelist .listbox li .listifo div{
+    padding: 10px 0px 10px 13px;
+    box-sizing: border-box;
+}
+
+
+.homelist .willcomeline{
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #a8a8a8;
+}
+.homelist .willcomeline .linebox{
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -32px;
+   top:-10px;
+   width: 65px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: #eee;
+    background-color: #a7a7a7;
+}
+
+
+.Mepage{
+    background: #f6f6f6
+}
+
+
+.Mepage .loginbox{
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 31px;
+    margin-bottom: 10px;
+}
+.Mepage .loginbox .user{
+    width: 100%;
+    height: 34px;
+    background: pink;
+    position: relative;
+    margin-bottom: 30px;
+    background: #f6f6f6
+}
+.Mepage .loginbox .pwd{
+    width: 100%;
+    height: 34px;
+    background: pink;
+    position: relative;
+    margin-bottom: 50px;
+    background: #f6f6f6
+}
+
+.Mepage .loginbox .linebox{
+    display: block;
+    width: 100%;
+    height: 12px;
+    border:1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    bottom: 3px;
+    left: -1px;
+}
+.Mepage .loginbox input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #f6f6f6;
+    outline: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+   
+}
+.Mepage .loginbox .button{
+    width: 50%;
+    height: 38px;
+    text-align: center;
+    background: #fe8233;
+    margin: 0 auto;
+    border-radius: 19px;
+    color: #fff;
+    line-height: 38px;
+}

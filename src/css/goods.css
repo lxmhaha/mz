@@ -1,0 +1,17 @@
+.goodsPage{
+position: absolute;
+top: 50px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+overflow: auto;
+background: #f2f2f2;
+}
+
+.goodsPage .goodsbanner{
+width: 100%;
+background: #fff;
+}
+.goodsPage .goodsbanner .swiper-wrapper .swiper-slide img{
+    width: 100%;
+}

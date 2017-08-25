@@ -1,0 +1,182 @@
+.shoppage{
+   position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+    background: #f2f2f2;
+}
+.shopbanner{
+    width: 100%;
+    background: #fff;
+   
+}
+.shopbanner .swiper-slide img{
+    width: 100%;
+}
+.shopiconlist{
+    height: 156px;
+    padding: 15px 0;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 8px;
+}
+.shopiconlist ul{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+}
+.shopiconlist ul li{
+width: 25%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 0;
+}
+.shopiconlist ul li img{
+    height: 40px;
+    width: 40px;
+   
+
+}
+.shopiconlist ul li p{
+font-size: 12px;
+text-align: center;
+color: #323232;
+line-height: 20px
+}
+.shoppage .recommend{
+width: 100%;
+height: 85px;
+padding: 0px 10px;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+}
+.shoppage .recommend img{
+    display: block;
+    width: 48%;
+    padding:10px 0px; 
+}
+.shopremlist{
+    width: 100%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+   
+}
+.shopremlist .remlist{
+    font-size: 12px;
+   width: 100%;
+   overflow: hidden;
+   box-sizing: border-box;
+ padding-bottom: 15px;
+    margin-bottom: 12px;
+    background: #fff;
+    padding-top: 10px;
+
+}
+  .shopremlist .remlist  .slistbox{
+      display: flex;
+     overflow-x: auto;
+     padding: 0 5px;
+  }
+   .shopremlist .remlist  .slistbox .more{
+    padding: 0 20px;
+    display: block; 
+        margin-top: 30px;
+   }
+     .shopremlist .remlist  .slistbox .more a{
+        display: block;
+     width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    margin: 0 auto;
+   
+     }
+.shopremlist .remlist img{
+    display: block;
+    width: 100%;
+}
+.shopremlist .remlist .shopsmalist{
+    width: 28%;
+    margin-right: 5px;
+  
+}
+.shopremlist .remlist .shopsmalist img{
+height: 85px;
+width: 85px;
+padding: 3px 0px;
+}
+.shopremlist .remlist .shopsmalist p{
+    width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    font-size: 12px;
+    color: #323232;
+    height: 11px;
+    padding: 5px 0px;
+}
+.shopremlist .remlist .shopsmalist span{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #ff6640;
+    padding: 5px 0;
+}
+.shophandpick{
+font-size: 12px;
+}
+.shophandpick h2{
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 33px;
+    text-align: center;
+    margin-top: -10px;
+}
+.shophandpick ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    box-sizing: border-box;
+   
+}
+.shophandpick ul li{
+width: 49%;
+background: #fff;
+margin-bottom: 6px;
+}
+.shophandpick ul li div{
+    padding-bottom: 10px;
+}
+.shophandpick ul li img{
+    display: block;
+    width: 100%;
+
+}
+.shophandpick ul li .proname{
+    font-size: 12px;
+    height: 34px;
+    color: #323232;
+    text-align: left;
+    padding-left: 6px;
+}
+.shophandpick ul li .price{
+    font-size: 13px;
+    color: #ff5000;
+    padding-left: 6px;
+}
+.shophandpick ul li .salecount{
+font-size: 9px;
+color: #999;
+margin-left: 15px;
+}

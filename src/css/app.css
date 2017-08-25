@@ -1,0 +1,156 @@
+#app{
+	height: 100%;
+	width: 100%;
+}
+#app .Appheader{
+	height: 50px;
+	width: 100%;
+	background: #282828;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	color: #999;
+	z-index: 101;
+}
+#app .Appheader>h1{
+	font-size: 14px;
+	color: #fff;
+	font-weight: normal;
+	width: 122px;
+	padding: 0px 14px;
+	line-height: 50px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+#app .Appheader .icon-menu{
+	display: block;
+	width: 48px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	/*border-right: 1px solid #999;*/
+	position: relative;
+}	
+#app .Appheader .icon-menu:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right:-1px;
+	width: 1px;
+	border-right: 1px solid #999;
+	height: 50px;
+	transform: scaleX(0.5);
+}
+
+#app .Appheader .icon-person{
+	display: block;
+	width: 48px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	justify-content: flex-end;
+	color: #fff;
+}
+#app .Appheader .city {
+	flex: 1;
+	font-size: 14px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+}
+#app .Appheader .city .icon-arrow-down:after{
+	font-size:12px;
+	line-height: 50px;
+	display: inline-block;
+	transform: scale(0.7);
+	margin-left: 5px;
+}
+
+#app .page{
+	position: absolute;
+	top:50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: auto;
+	/*background: pink;*/
+	
+}
+#app .page .cover{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background: rgba(0,0,0,0.5);
+	transition: all 2s;
+	z-index: 300;
+}
+#app .page .slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 210px;
+	background: #282828;
+	transition: all 1s;
+	z-index: 300;
+}
+
+#app .page .slide li{
+	font-size: 14px;
+	color: #999;
+	height: 50px;
+	padding: 0px 16px;
+	width: 210px;
+	box-sizing: border-box;
+	line-height: 50px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+#app .page .slide li:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom:-1px;
+	height: 1px;
+	border-bottom: 1px solid #999;
+	width: 100%;
+	transform: scaleY(0.5);
+	color: #999;
+}
+
+#app .page .slide li .icon-arrow-right:before{
+	font-size:12px;
+	line-height: 50px;
+	display: block;
+	transform: scale(0.7);
+
+}
+#app .page:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top:-1px;
+	height: 1px;
+	border-top: 1px solid #999;
+	/*width: 210px;*/
+	width: 100%;
+	transform: scaleY(0.5);
+	z-index: 101;
+}
+#app .page.tabsPage{
+	
+}
+.homebanner{
+	width: 100%;
+	
+}
+.homebanner .swiper-wrapper img{
+	width: 100%;
+	
+}

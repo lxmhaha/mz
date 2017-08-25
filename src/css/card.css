@@ -1,0 +1,95 @@
+.cardPage .nav{
+text-align: center;
+font-size: 16px;
+line-height: 45px;
+width: 100%;
+position: absolute;
+top: 0px;
+left: 0;
+display: flex;
+ border-bottom: 1px solid  #ff7100;
+}
+.cardPage .nav a{
+display: block;
+width: 50%;
+color: #333;
+}
+.cardPage .nav a.active{
+    border-bottom: 4px solid  #ff7100;
+    color: #ff7100;
+}
+.cardPage .fcard-box{
+      margin-top: 30px;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+ background: #fff;
+  width: 100%;
+    box-sizing: border-box;
+    padding: 0 31px;
+}
+.cardPage .scard-box{
+      margin-top: 30px;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+    background: #fff;
+     width: 100%;
+    box-sizing: border-box;
+    padding: 0 31px;
+}
+
+.cardPage .fcard-box .user{
+    width: 100%;
+    height: 34px;
+    background: pink;
+    position: relative;
+    margin-bottom: 30px;
+    background: #fff;
+    font-size:14px;
+    padding-left: 10px;
+}
+.cardPage .fcard-box .pwd{
+    width: 100%;
+    height: 34px;
+    background: pink;
+    position: relative;
+    margin-bottom: 50px;
+    background: #fff;
+    font-size: 14px;
+        padding-left: 10px;
+}
+
+.cardPage .fcard-box .linebox{
+    display: block;
+    width: 100%;
+    height: 12px;
+    border:1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    bottom: 3px;
+    left: -1px;
+}
+.cardPage .fcard-box input{
+    height: 100%;
+    border: none;
+    background: #fff;
+    outline: none;
+    box-sizing: border-box;
+     font-size: 14px;
+   
+}
+.cardPage .fcard-box .button{
+    width: 50%;
+    height: 38px;
+    text-align: center;
+    background: #fe8233;
+    margin: 0 auto;
+    border-radius: 19px;
+    color: #fff;
+    line-height: 38px;
+}

@@ -1,0 +1,60 @@
+.citypage{
+    background: #f2f2f2;
+        font-size: 14px;
+        color: #333;
+}
+.citypage h2{
+    font-weight: normal;
+    height: 30px;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 40px;
+    background-color: #ebebeb;
+}
+.citypage .citylist .listitem{
+
+width: 100%;
+box-sizing: border-box;
+font-size: 14px;
+line-height: 40px;
+color: #333;
+}
+.citypage .citylist .listitem .itemword{
+    height: 40px;
+    padding-left: 15px;
+}
+.citypage .citylist .item-address{
+    background: #fff;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+}
+.citypage .item-address{
+   background: #fff;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap; 
+  
+}
+.citypage .citylist .item-address .addressname{
+    display:block;
+    width: 25%;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    color: #838383;
+    border-bottom: #ebebeb 1px solid;
+    cursor: pointer;
+}
+.citypage .addressname{
+    display:block;
+    width: 25%;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    color: #838383;
+    border-bottom: #ebebeb 1px solid;
+    cursor: pointer;
+}
