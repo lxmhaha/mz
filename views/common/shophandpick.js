@@ -15,7 +15,7 @@ export default class ShopHandpick extends Component{
                {
                    this.props.shophandpick.map((item,index)=>{
                         return(
-                            <li key={index}>
+                            <li key={index}  onClick={this.pickAction.bind(this,item.id)}>
                                 <img src={item.image}/>
                                 <p class='proname'>{item.name}</p>
                                 <div>
@@ -31,4 +31,9 @@ export default class ShopHandpick extends Component{
             </div>
         )
     }
+    pickAction(id){
+        console.log(id)
+      this.props.pickAction(id)
+   
+   }
 }

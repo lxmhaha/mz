@@ -213,18 +213,23 @@ bigobj.srcpiclist=newsrcpiclist
     })
   }) 
 }
+
+//商城页面好货精选
 function gethandpickDate(num){
   return new Promise((resolve,reject)=>{
 
       axios.get(API.handpickApi+num)
     .then((res)=>{
-//console.log((res.data.data.list) )
+
+console.log((res.data.data.list) )
+
  let handarr=res.data.data.list
 let harr=handarr.map((item)=>{
   let hobj={}
   hobj.image=item.skuList[0].image
   hobj.name=item.masterName
-  hobj.price=item.minPrice/100
+  hobj.id=item.id
+  hobj.price=item.skuList[0].price/100
   hobj.salesCount=item.displaySalesCount
   return hobj
 })

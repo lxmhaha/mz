@@ -55,7 +55,7 @@ export default class Shop extends Component{
 						}
 					</div>
 					<ShopremList rcpiclist={this.state.rcpiclist} srcpiclist={this.state.srcpiclist}  goodsAction={this.goodsAction.bind(this)}/>
-					<ShopHandpick shophandpick={this.state.shophandpick}/>
+					<ShopHandpick shophandpick={this.state.shophandpick} pickAction={this.pickAction.bind(this)}/>
 		</div>
 			
 		)
@@ -68,11 +68,19 @@ export default class Shop extends Component{
 					}
 		});
 	}
+	pickAction(item){
+		this.state.history.push({
+				pathname: '/goodsdetail',
+						state: {
+							gid:item
+						}
+			});
+		}
 	handleScroll(e){
 		let clientHeight = this.refs.bodyBox.clientHeight; //可视区域高度
         let scrollTop  = this.refs.bodyBox.scrollTop;  //滚动条滚动高度
         let scrollHeight = this.refs.bodyBox.scrollHeight; //滚动内容高度
-		console.log(clientHeight,scrollTop,scrollHeight)
+		//console.log(clientHeight,scrollTop,scrollHeight)
 
 		if((clientHeight+scrollTop)>scrollHeight-30 && this.state.flag==false){
 			this.state.page++
@@ -109,7 +117,7 @@ export default class Shop extends Component{
 		this.setState({recommend:res.recommend})
 		this.setState({rcpiclist:res.rcpiclist})
 		this.setState({srcpiclist:res.srcpiclist})
-	console.log(this.state.rcpiclist)
+	//console.log(this.state.rcpiclist)
 
 			mySwiper.update();
 		})
